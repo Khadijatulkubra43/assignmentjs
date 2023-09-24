@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Swap Images on Button Click</title>
+</head>
+<body>
+  <img src="image1.jpg" alt="Image 1" id="image">
+  <button onclick="swapImage()">Swap Image</button>
+
+  <script>
+    var imageElement = document.getElementById("image");
+    var isImage1 = true;
+
+    function swapImage() {
+      if (isImage1) {
+        imageElement.src = "image2.jpg"; // Replace with the path to your second image
+        isImage1 = false;
+      } else {
+        imageElement.src = "image1.jpg"; // Replace with the path to your first image
+        isImage1 = true;
+      }
+    }
+  </script>
+</body>
+</html>

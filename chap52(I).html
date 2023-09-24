@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click to Make Bold</title>
+  <style>
+    .bold {
+      font-weight: bold;
+    }
+    .image-text-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-text-container:hover .text {
+      display: block;
+    }
+
+    .text {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: white;
+    }
+    h1:hover {
+      background-color: black;
+      color: lightgray; 
+    }
+    p:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <p onclick="toggleBold(this)">Click this sentence to make it bold.</p>
+  <div class="image-text-container">
+    <img src="" alt="Image">
+    <div class="text">Hovered Text</div>
+  </div>
+  <h1>Hover over this heading</h1>
+  <p>Hover over this paragraph to add an underline style to the text.</p>
+
+  <script>
+    function toggleBold(element) {
+      element.classList.toggle("bold");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Input Example</title>
+</head>
+<body>
+  <input type="text" id="userInput" placeholder="Enter text">
+  <button onclick="printInputValue()">Submit</button>
+  <!--next-->
+  <label for="checkbox">Check this box:</label>
+  <input type="checkbox" id="checkbox">
+  <button onclick="printCheckboxValue()">Submit</button>
+  <!--next-->
+  <select id="selectBox">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+  <button onclick="printSelectValue()">Submit</button>
+  <!--next-->
+  <input type="text" id="statusField">
+  <button onclick="setStatus()">Set Status</button>
+  <!--next-->
+  <input type="text" id="textField" placeholder="Enter text">
+  <button onclick="fillIfEmpty()">Fill Input</button>
+  <!--next-->
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><br><br>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" required><br><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    function printInputValue() {
+      var userInput = document.getElementById("userInput").value;
+      console.log("User Input: " + userInput);
+    }
+    //next
+    function printCheckboxValue() {
+      var checkbox = document.getElementById("checkbox");
+      console.log("Checkbox Value: " + checkbox.checked);
+    }
+    //next
+    function printSelectValue() {
+      var selectBox = document.getElementById("selectBox");
+      var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+      console.log("Selected Value: " + selectedValue);
+    }
+    //next
+    function setStatus() {
+      var married = false; // Change this to true or false based on user input
+      var statusField = document.getElementById("statusField");
+      
+      if (!married) {
+        statusField.value = "available";
+      }
+    }
+    //next
+    function fillIfEmpty() {
+      var textField = document.getElementById("textField");
+      if (textField.value.trim() === "") {
+        textField.value = "Default Text";
+      }
+    }
+    //next
+    function validateForm() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+      return true;
+    }
+
+  </script>
+</body>
+</html>

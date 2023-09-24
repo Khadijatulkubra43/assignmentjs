@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*Chapter#46,48
+    /* a:hover {
+      color: red;
+    }
+    button:hover {
+      background-color: yellow;
+    } */
+  </style>
+<body>
+    <!--Chapter#46,48-->
+    <!-- <div id="clickElement">Click me!</div>
+     <div id="elementToHide">Click to hide me</div>
+  <button id="hideButton">Hide Element</button>
+    <a href="#">Hover over me</a>
+  <a href="#" id="scrollToTop">Scroll to Top</a>
+  <a href="#" id="playSound">Click to Play Sound</a>
+  <audio id="audioElement" src=""></audio>
+  <a href="https://www.example.com" target="_blank">Open New Window</a>
+  <button id="alertButton">Click Me</button>
+    <button id="colorChangeButton">Hover over me</button>
+      <div id="hoverElement">Hover over me</div>
+       <div id="elementToHide">Mouse out of me</div>
+       <a href="#" id="openWindow">Open New Window</a> -->
+
+
+</body>
+<script>
+    //Chapter#41-42
+//     for (var i = 0; i < 2; i++) {
+//   // This loop runs twice but does nothing.
+// }
+// var animals = ["horse", "ox", "cow", "pig", "duck"];
+
+// for (var i = 0; i < animals.length; i++) {
+//   if (animals[i] === "pig") {
+//     alert("Found it!");
+//     break; // Exit the loop when "pig" is found.
+//   }
+// }
+// var i = 1;
+// while (i <= 10) {
+//   console.log(i);
+//   i++;
+// }
+// var i = 1;
+// do {
+//   console.log(i);
+//   i++;
+// } while (i <= 10);
+// var userInput;
+// while (true) {
+//   userInput = prompt("Enter a number:");
+//   if (userInput === null) {
+//     break; // Exit the loop if the user cancels or closes the prompt.
+//   }
+//   console.log("You entered: " + userInput);
+// }
+// var number = parseInt(prompt("Enter a number:"));
+
+// while (!isNaN(number)) {
+//   if (number % 2 === 0) {
+//     console.log(number + " is even.");
+//   } else {
+//     console.log(number + " is odd.");
+//   }
+//   number = parseInt(prompt("Enter another number (or non-number to exit):"));
+// }
+// var secretNumber = Math.floor(Math.random() * 100) + 1;
+// var attempts = 0;
+// var maxAttempts = 10;
+
+// do {
+//   var guess = parseInt(prompt("Guess the number (between 1 and 100):"));
+//   attempts++;
+
+//   if (isNaN(guess)) {
+//     console.log("Invalid input. Please enter a valid number.");
+//   } else if (guess < secretNumber) {
+//     console.log("Too low! Try again.");
+//   } else if (guess > secretNumber) {
+//     console.log("Too high! Try again.");
+//   } else {
+//     console.log("Congratulations! You guessed the number: " + secretNumber);
+//     break;
+//   }
+
+//   if (attempts >= maxAttempts) {
+//     console.log("Out of attempts. The secret number was " + secretNumber);
+//     break;
+//   }
+// } while (true);
+//Chapter46-48
+//  document.getElementById("clickElement").addEventListener("click", function() {
+//       console.log("Element clicked!");
+//     });
+//     document.getElementById("hideButton").addEventListener("click", function() {
+//       document.getElementById("elementToHide").style.display = "none";
+//     });
+//  document.getElementById("scrollToTop").addEventListener("click", function() {
+//       window.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//       });
+//     });
+//      document.getElementById("playSound").addEventListener("click", function() {
+//       var audio = document.getElementById("audioElement");
+//       audio.play();
+//     });
+//       document.getElementById("alertButton").addEventListener("click", function() {
+//       alert("Button clicked!");
+//     });
+//     document.getElementById("hoverElement").addEventListener("mouseover", function() {
+//       alert("Mouse over element!");
+//     });
+//      document.getElementById("elementToHide").addEventListener("mouseout", function() {
+//       this.style.display = "none";
+//     });
+//     document.getElementById("openWindow").addEventListener("click", function() {
+//       var newWindow = window.open("https://www.example.com", "_blank", "width=500,height=500");
+      
+//       // Add a close button to the new window
+//       newWindow.document.write("<button id='closeButton'>Close Window</button>");
+
+//       // Add an event listener to close the new window when the close button is clicked
+//       newWindow.document.getElementById("closeButton").addEventListener("click", function() {
+//         newWindow.close();
+//       });
+//     });
+
+</script>
+</html>

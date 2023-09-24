@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expand Paragraph</title>
+</head>
+<body>
+  <p id="expandableParagraph">This is some content that can be expanded. Click "Show More" to see more.</p>
+  <button onclick="expandParagraph()">Show More</button>
+<!--next-->
+<p id="searchParagraph">This is some sample text. Search for a specific word or phrase in this text.</p>
+<input type="text" id="searchInput" placeholder="Enter word or phrase">
+<button onclick="searchText()">Search</button>
+<!--next-->
+<p id="longestWordParagraph">This is a sample paragraph to find the longest word in it.</p>
+  <button onclick="findLongestWord()">Find Longest Word</button>
+  <!--next-->
+  <input type="text" id="textField" placeholder="Enter text">
+  <button onclick="setTextFromField()">Set Text</button>
+  <p id="outputParagraph">This paragraph will be updated.</p>
+  <!--next-->
+  <input type="text" id="textField" placeholder="Enter text">
+  <button onclick="setTextWithCondition()">Set Text</button>
+  <p id="outputParagraph">This paragraph will be updated.</p>
+  <!--next-->
+  <input type="text" id="textField" placeholder="Enter text">
+  <button onclick="setTextWithLengthCheck()">Set Text</button>
+  <p id="outputParagraph">This paragraph will be updated.</p>
+  <script>
+    function expandParagraph() {
+      var paragraph = document.getElementById("expandableParagraph");
+      paragraph.style.overflow = "visible";
+      paragraph.style.height = "auto";
+    }
+    //next
+    function searchText() {
+      var paragraph = document.getElementById("searchParagraph");
+      var searchTerm = document.getElementById("searchInput").value;
+      var found = paragraph.textContent.includes(searchTerm);
+
+      if (found) {
+        alert("The word or phrase was found in the text.");
+      } else {
+        alert("The word or phrase was not found in the text.");
+      }
+    }
+    //next
+    function findLongestWord() {
+      var paragraph = document.getElementById("longestWordParagraph");
+      var words = paragraph.textContent.split(" ");
+      var longestWord = "";
+
+      for (var i = 0; i < words.length; i++) {
+        if (words[i].length > longestWord.length) {
+          longestWord = words[i];
+        }
+      }
+
+      alert("The longest word in the paragraph is: " + longestWord);
+    }
+    //next
+    function setTextFromField() {
+      var textFieldValue = document.getElementById("textField").value;
+      if (textFieldValue.trim() !== "") {
+        document.getElementById("outputParagraph").textContent = textFieldValue;
+      }
+    }
+    //next
+    function setTextWithCondition() {
+      var textFieldValue = document.getElementById("textField").value;
+      var specificWord = "example"; // Change this to your specific word or phrase
+      if (textFieldValue === specificWord) {
+        document.getElementById("outputParagraph").textContent = textFieldValue;
+      }
+    }
+    //next
+    function setTextWithLengthCheck() {
+      var textFieldValue = document.getElementById("textField").value;
+      var maxLength = 10; // Change this to your desired maximum length
+      if (textFieldValue.length < maxLength) {
+        document.getElementById("outputParagraph").textContent = textFieldValue;
+      }
+    }
+
+
+  </script>
+</body>
+</html>
